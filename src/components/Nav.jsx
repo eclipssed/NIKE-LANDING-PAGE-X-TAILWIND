@@ -12,13 +12,7 @@ const Nav = () => {
   };
 
   return (
-    <nav
-      className={` relative ease-out duration-100  ${
-        showBurger
-          ? " ease-in sticky top-0 left-0 right-0 border-b border-b-light bg-[#121212] bg-opacity-80"
-          : ""
-      }`}
-    >
+    <nav className="py-4">
       <div
         className={`flex flex-wrap items-center justify-between mx-auto py-4 px-6 md:px-16 duration-300`}
       >
@@ -49,9 +43,9 @@ const Nav = () => {
         </div>
       </div>
       {/* menu for mobile devices */}
-      <div className=" block text-center">
+      <div className=" md:hidden block text-center bg-slate-600">
         {showBurger && (
-          <ul className="flex-1 flex flex-col justify-center items-center gap-16 my-8">
+          <ul className="flex-1 flex flex-col justify-center items-center gap-16 py-8">
             {navLinks.map((navlink) => (
               <li key={navlink.label} onClick={toggleMenu}>
                 <a
